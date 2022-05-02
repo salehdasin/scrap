@@ -1,9 +1,19 @@
 from bs4 import BeautifulSoup
 import requests
-response=requests.get("https://www.filimo.com/home/")
+response=requests.get("https://takmano.com/")
 soup=BeautifulSoup(response.text,'html.parser')
-print(soup.find('a'))
-
-
-print(soup.find('div'))
-print ('تمام')
+#print(soup.find('a'))
+#print ('تمام1')
+#print(soup.find('div'))
+#print ('تمام2')
+#print(soup.body.div)
+#print ('تمام3')
+#print(soup.find('div',attrs={'class':'elementor-text-editor elementor-clearfix'}))
+#print('تمام4')
+#print(soup.findAll('div',attrs={'class':'elementor-text-editor elementor-clearfix'}))
+#print('تمام5')
+#print(soup.find('a').text)
+#print('تمام5')
+list=soup.findAll('a')
+for i in list:
+    print(i.text)
