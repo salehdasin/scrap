@@ -1,0 +1,9 @@
+from bs4 import BeautifulSoup
+import requests
+response=requests.get("https://www.filimo.com/home/")
+soup=BeautifulSoup(response.text,'html.parser')
+print(soup.find('a'))
+
+
+print(soup.find('div'))
+print ('تمام')
